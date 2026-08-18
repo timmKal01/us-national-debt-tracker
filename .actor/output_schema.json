@@ -1,0 +1,11 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of US National Debt Tracker",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Daily debt records",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

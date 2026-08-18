@@ -1,0 +1,26 @@
+{
+    "title": "US National Debt Tracker Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "daysBack": {
+            "title": "Days back",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many of the most recent daily records to return (Treasury publishes on business days only, so this is roughly calendar days back).",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 1825
+        },
+        "maxResults": {
+            "title": "Max results",
+            "type": "integer",
+            "editor": "number",
+            "description": "Maximum number of daily records to return.",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 100
+        }
+    },
+    "required": []
+}

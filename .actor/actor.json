@@ -1,7 +1,7 @@
 {
     "actorSpecification": 1,
     "name": "us-national-debt-tracker",
-    "title": "US National Debt Tracker — Treasury Fiscal Data",
+    "title": "US National Debt Tracker: Daily Treasury Data",
     "description": "Get the daily US national debt (debt held by the public, intragovernmental holdings, total outstanding) with day-over-day change, straight from the official US Treasury Fiscal Data API. For finance, macro, and policy research teams.",
     "version": "0.1",
     "meta": {

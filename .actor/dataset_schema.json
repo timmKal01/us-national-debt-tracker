@@ -1,0 +1,43 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "date",
+                    "debtHeldByPublicUsd",
+                    "intragovernmentalHoldingsUsd",
+                    "totalDebtUsd",
+                    "dayOverDayChangeUsd"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "date": {
+                        "label": "Date",
+                        "format": "text"
+                    },
+                    "debtHeldByPublicUsd": {
+                        "label": "Debt held by public USD",
+                        "format": "number"
+                    },
+                    "intragovernmentalHoldingsUsd": {
+                        "label": "Intragovernmental holdings USD",
+                        "format": "number"
+                    },
+                    "totalDebtUsd": {
+                        "label": "Total debt USD",
+                        "format": "number"
+                    },
+                    "dayOverDayChangeUsd": {
+                        "label": "Day over day change USD",
+                        "format": "number"
+                    }
+                }
+            }
+        }
+    }
+}

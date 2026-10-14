@@ -55,4 +55,4 @@ whether you request 1 day or 100.
 
 ## Related products
 
-- [Economic Indicator Lookup](https://github.com/timmKal01/economic-indicator-lookup) — broader World Bank macro indicators, not US-specific daily debt
+- [World Bank Data Lookup](https://apify.com/m_ctim/economic-indicator-lookup): broader World Bank macro indicators, not US-specific daily debt

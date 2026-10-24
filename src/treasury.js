@@ -1,3 +1,7 @@
+// Some public APIs refuse requests that identify themselves only as Node's default "node" user agent (data.cms.gov
+// started doing so in October 2026), so every request says which tool is asking and where to find it.
+const USER_AGENT = 'us-national-debt-tracker/0.1 (+https://apify.com/m_ctim/us-national-debt-tracker)';
+
 const BASE_URL = 'https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny';
 
 const TRANSIENT_STATUSES = new Set([429, 500, 502, 503, 504]);
@@ -19,7 +23,7 @@ async function fetchWithRetry(url) {
         const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
         let res;
         try {
-            res = await fetch(url, { headers: { Connection: 'close' }, signal: controller.signal });
+            res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Connection: 'close' }, signal: controller.signal });
         } catch (err) {
             lastError = err.name === 'AbortError' ? new Error(`Request timed out after ${REQUEST_TIMEOUT_MS}ms: ${url}`) : err;
             if (attempt < MAX_ATTEMPTS) await sleep(1000 * 2 ** (attempt - 1));
